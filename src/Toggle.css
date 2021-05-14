@@ -10,8 +10,8 @@
     display: inline-block;
     position: relative;
     transition: all ease-in-out 0.3s;
-    width: 100px;
-    height: 50px;
+    width: 65px;
+    height: 37px;
 }
 
 .toggle label::after {
@@ -24,8 +24,8 @@
     left: 2px;
     top: 2px;
     transition: all ease-in-out 0.3s;
-    width: 42px;
-    height: 42px;
+    width: 29px;
+    height: 29px;
 }
 
 .toggle input[type='checkbox']:checked ~ label {
@@ -35,5 +35,5 @@
 
 .toggle input[type='checkbox']:checked ~ label::after {
     background-color: #0054b0;
-    transform: translateX(50px);
+    transform: translateX(29px);
 }

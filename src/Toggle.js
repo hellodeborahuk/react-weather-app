@@ -1,16 +1,21 @@
 import "./Toggle.css";
 
-export default function Toggle(){
-  const toggle = document.getElementById("toggle");
-  const weatherapp = document.weatherapp;
+export default function Toggle(props){
 
-  toggle.addEventListener("input", (e) => {
-    const isChecked = e.target.checked;
+function handleClick(event) {
+  const isChecked = event.target.checked;
+  props.toggleHandler(isChecked);
+  /* if (isChecked) {
+    weatherapp.classList.add("dark-theme");
+  } else {
+    weatherapp.classList.remove("dark-theme");
+  } */
+}
 
-    if (isChecked) {
-      weatherapp.classList.add("dark-theme");
-    } else {
-      weatherapp.classList.remove("dark-theme");
-    }
-  });
+  return (
+    <div class="toggle">
+      <input type="checkbox" id="toggle" onChange={handleClick} />
+      <label for="toggle"></label>
+    </div>
+  );
 };

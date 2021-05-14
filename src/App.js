@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import CurrentWeather from "./CurrentWeather";
 import CurrentWeatherDescription from "./CurrentWeatherDescription";
 import Search from "./Search";
@@ -7,18 +7,23 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 
 export default function App() {
+  let [isDarkModeEnabled, setIsDarkModeEnabled] = useState(true);
+
+
   return (
     <div className="App">
       <div className="container">
         <div className="outerdiv">
-          <div className="weatherapp">
+          <div className={"weatherapp" + (isDarkModeEnabled ? " dark-theme" : "")}>
             <div className="header row">
               <div className="col-5">
                 <h1>London</h1>
                 <p>Tuesday 6th May, 20:45</p>
               </div>
               <Search />
-              <div className="col-1"></div>
+              <div className="col-1">
+                <Toggle toggleHandler={setIsDarkModeEnabled} />
+              </div>
             </div>
             <div className="body row">
               <div className="col-2">
