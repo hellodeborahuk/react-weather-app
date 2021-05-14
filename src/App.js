@@ -3,27 +3,29 @@ import CurrentWeather from "./CurrentWeather";
 import CurrentWeatherDescription from "./CurrentWeatherDescription";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
-import "./fontawesome";
+
 
 export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <div className="header row">
-          <div className="col-5">
-            <h1>London</h1>
-            <p>Tuesday 6th May, 20:45</p>
+        <div className="weather-app">
+          <div className="header row">
+            <div className="col-5">
+              <h1>London</h1>
+              <p>Tuesday 6th May, 20:45</p>
+            </div>
+            <div className="col-6">Search box</div>
+            <div className="col-1">toggle</div>
           </div>
-          <div className="col-6">Search box</div>
-          <div className="col-1">toggle</div>
-        </div>
-        <div className="body row">
-          <div className="col-2">
-            <CurrentWeather />
-          </div>
-          <div className="col-8"></div>
-          <div className="col-2">
-            <CurrentWeatherDescription />
+          <div className="body row">
+            <div className="col-2">
+              <CurrentWeather />
+            </div>
+            <div className="col-8"></div>
+            <div className="col-2">
+              <CurrentWeatherDescription />
+            </div>
           </div>
         </div>
         <div className="footer row"> </div>
