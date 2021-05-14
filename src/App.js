@@ -7,8 +7,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 
 export default function App() {
-  let [isDarkModeEnabled, setIsDarkModeEnabled] = useState(true);
-
+  let [isDarkModeEnabled, setIsDarkModeEnabled] = useState(false);
 
   return (
     <div className="App">
