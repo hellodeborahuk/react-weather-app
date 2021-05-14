@@ -6,7 +6,6 @@ import Toggle from "./Toggle";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 
-
 export default function App() {
   return (
     <div className="App">
@@ -14,7 +13,7 @@ export default function App() {
         <div className="outerdiv">
           <div className="weatherapp">
             <div className="header row">
-              <div className="col-6">
+              <div className="col-5">
                 <h1>London</h1>
                 <p>Tuesday 6th May, 20:45</p>
               </div>
@@ -29,7 +28,7 @@ export default function App() {
                 <img
                   src="media/undraw_japan_ubgk.svg"
                   alt="a tree with the sun behind it"
-                  width="100"
+                  width="100%"
                 />
               </div>
               <div className="col-2">
@@ -38,16 +37,17 @@ export default function App() {
             </div>
           </div>
           <div className="footer row"> </div>
+
+          <p>
+            <a
+              href="https://github.com/hellodeborahuk/react-weather-app"
+              target="_blank"
+            >
+              Open-source code
+            </a>{" "}
+            by Debbie Dann
+          </p>
         </div>
-        <p>
-          <a
-            href="https://github.com/hellodeborahuk/react-weather-app"
-            target="_blank"
-          >
-            Open-source code
-          </a>{" "}
-          by Debbie Dann
-        </p>
       </div>
     </div>
   );

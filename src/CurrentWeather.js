@@ -11,7 +11,7 @@ export default function CurrentWeather() {
         </li>
         <li className="current-weather-description">sunny</li>
         <li className="current-weather-icon">
-          <img src="https://ssl.gstatic.com/onebox/weather/48/sunny.png" />
+          <img src="https://ssl.gstatic.com/onebox/weather/48/sunny.png" alt="sunny" />
         </li>
       </ul>
     </div>
