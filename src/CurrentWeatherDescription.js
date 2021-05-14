@@ -5,7 +5,7 @@ import { WiHumidity } from "react-icons/wi";
 
 export default function CurrentWeatherDescription() {
     return (
-      <ul>
+      <ul className="current-weather-description">
         <li><WiHumidity /></li>
         <li><FaWind /></li>
         <li>Something else</li>

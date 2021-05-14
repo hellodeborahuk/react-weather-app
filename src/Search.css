@@ -1,0 +1,44 @@
+.search-input:focus {
+  border: 1px solid #869e9b;
+    background-color: #f4f6f6;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 18px;
+    max-width: 100%;
+}
+
+.city-search {
+  text-align: right;
+  margin-top: 8px;
+}
+
+.search-button {
+  border: 1px solid #869e9b;
+  padding: 5px 10px;
+  font-size: 18px;
+  margin-left: 5px;
+  border-radius: 4px;
+  background-color: #869e9b;
+  color: #f7f2f2;
+}
+
+.search-button:hover {
+  color: #869e9b;
+  background-color: #f4f6f6;
+}
+
+.current-button {
+  border: 1px solid #869e9b;
+  padding: 5px 10px;
+  font-size: 18px;
+  margin-left: 5px;
+  border-radius: 4px;
+  background-color: #869e9b;
+  color: #f7f2f2;
+  text-align: center;
+}
+
+.current-button:hover {
+  color: #869e9b;
+  background-color: #f4f6f6;
+}
