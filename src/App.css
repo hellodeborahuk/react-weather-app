@@ -17,4 +17,5 @@ vertical-align: middle;
 
 .weatherapp.dark-theme {
     background-color: #333;
+    color: rgb(247,242,242);
 }

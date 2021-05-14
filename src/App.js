@@ -14,14 +14,16 @@ export default function App() {
     <div className="App">
       <div className="container">
         <div className="outerdiv">
-          <div className={"weatherapp" + (isDarkModeEnabled ? " dark-theme" : "")}>
+          <div
+            className={"weatherapp" + (isDarkModeEnabled ? " dark-theme" : "")}
+          >
             <div className="header row">
               <div className="col-5">
                 <h1>London</h1>
                 <p>Tuesday 6th May, 20:45</p>
               </div>
-              <Search />
-              <div className="col-1">
+              <div className="col-7 d-flex flex-row justify-content-end">
+                <Search />
                 <Toggle toggleHandler={setIsDarkModeEnabled} />
               </div>
             </div>
