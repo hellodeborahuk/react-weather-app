@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import CurrentWeather from "./CurrentWeather";
-import CurrentWeatherDescription from "./CurrentWeatherDescription";
 import Search from "./Search";
 import Toggle from "./Toggle";
 import "./App.css";
@@ -26,21 +25,9 @@ export default function App() {
                 <Toggle toggleHandler={setIsDarkModeEnabled} />
               </div>
             </div>
-            <div className="body row">
-              <div className="col-2">
+            
                 <CurrentWeather />
-              </div>
-              <div className="col-8">
-                <img
-                  src="media/undraw_japan_ubgk.svg"
-                  alt="a tree with the sun behind it"
-                  width="100%"
-                />
-              </div>
-              <div className="col-2">
-                <CurrentWeatherDescription />
-              </div>
-            </div>
+          
           </div>
           <div className="footer row"> </div>
 
