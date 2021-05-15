@@ -40,6 +40,10 @@ vertical-align: middle;
     padding: 30px;
     border-radius: 12px;
     background-color: white;
+    background-image: url(./media/undraw_japan_ubgk.svg);
+    background-repeat: no-repeat;
+    background-size: 55%;
+    background-position: center;
 }
 
 .weatherapp.dark-theme {

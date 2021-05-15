@@ -9,7 +9,7 @@ export default function CurrentWeather(props) {
     return (
       <div className="current-weather">
         <div className="body row">
-          <div className="col-2">
+          <div className="col-3">
             <ul className="current-weather-info">
               <li>
                 <WeatherTemperature celsius={props.weatherData.temperature} />
@@ -26,21 +26,14 @@ export default function CurrentWeather(props) {
               </li>
             </ul>
           </div>
-          <div className="col-8">
-            <img
-              src="media/undraw_japan_ubgk.svg"
-              alt="a tree with the sun behind it"
-              width="100%"
-            />
-          </div>
-          <div className="col-2">
+          <div className="col">&nbsp;</div>
+          <div className="col-3">
             <ul className="current-weather-description">
               <li>
                 <WiHumidity /> {props.weatherData.humidity}%
               </li>
               <li>
-                <FaWind />
-                {props.weatherData.wind} km/h
+                <FaWind /> {props.weatherData.wind} km/h
               </li>
             </ul>
           </div>
