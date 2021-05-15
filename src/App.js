@@ -5,9 +5,9 @@ import Toggle from "./Toggle";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 
-export default function App() {
-  let [isDarkModeEnabled, setIsDarkModeEnabled] = useState(false);
 
+export default function App() {
+  const [isDarkModeEnabled, setIsDarkModeEnabled] = useState(false);
   return (
     <div className="App">
       <div className="container">
@@ -17,7 +17,7 @@ export default function App() {
           >
             <div className="header row location-date">
               <div className="col-5">
-                <h1>London</h1>
+                <h1>New York</h1>
                 <p>Tuesday 6th May, 20:45</p>
               </div>
               <div className="col-7 d-flex flex-row justify-content-end">
@@ -25,9 +25,7 @@ export default function App() {
                 <Toggle toggleHandler={setIsDarkModeEnabled} />
               </div>
             </div>
-            
-                <CurrentWeather />
-          
+            <CurrentWeather defaultCity="New York" />
           </div>
           <div className="footer row"> </div>
 
