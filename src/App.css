@@ -8,6 +8,7 @@
 }
 
 body {
+  background-color: #333!important;
   color: #524948;
 }
 p {
@@ -63,5 +64,10 @@ vertical-align: middle;
 }
 
 .github-link {
-    margin-left: 50px;
+    margin-left: 30px;
+    color: rgb(247,242,242);
+}
+
+.github-link a {
+    color: rgb(247,242,242);
 }

@@ -22,6 +22,7 @@ export default function CurrentWeather(props) {
                   src={props.weatherData.iconUrl}
                   alt={props.weatherData.description}
                   id="icon"
+                
                 />
               </li>
             </ul>
