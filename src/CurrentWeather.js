@@ -9,13 +9,13 @@ export default function CurrentWeather(props) {
     return (
       <div className="current-weather">
         <div className="body row">
-          <div className="col-3">
-            <ul className="current-weather-info">
+          <div className="col-3 current-weather-info">
+            <ul>
               <li>
                 <WeatherTemperature celsius={props.weatherData.temperature} />
               </li>
-              <li className="text-left text-capitalize">
-                {props.weatherData.description}
+              <li className="text-left text-capitalize ">
+                <p>{props.weatherData.description}</p>
               </li>
               <li className="current-weather-icon">
                 <img
@@ -27,8 +27,8 @@ export default function CurrentWeather(props) {
             </ul>
           </div>
           <div className="col">&nbsp;</div>
-          <div className="col-3">
-            <ul className="current-weather-description">
+          <div className="col-3 current-weather-description">
+            <ul>
               <li>
                 <WiHumidity /> {props.weatherData.humidity}%
               </li>

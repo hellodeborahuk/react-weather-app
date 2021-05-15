@@ -59,6 +59,7 @@ vertical-align: middle;
     background-repeat: no-repeat;
     background-size: 55%;
     background-position: center;
+    min-height: 400px;
 }
 
 .github-link {
