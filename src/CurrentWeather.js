@@ -6,20 +6,6 @@ import { FaCloudRain } from "react-icons/fa";
 
 
 export default function CurrentWeather(props) {
-  /*
-  const [weatherData, setWeatherData] = useState({ ready: false});
-  function handleResponse(response) {
-    setWeatherData({
-      ready: true,
-      temperature: Math.round(response.data.main.temp),
-      wind: response.data.wind.speed,
-      date: "Tuesday 6th May, 20:45",
-      city: response.data.name,
-      humidity: response.data.main.humidity,
-      description: response.data.weather[0].description,
-      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-    });
-  }*/
 
   if (props.weatherData.ready) {
     return (
