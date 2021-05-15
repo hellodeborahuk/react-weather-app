@@ -14,7 +14,7 @@ export default function CurrentWeather(props) {
               <li>
                 <WeatherTemperature celsius={props.weatherData.temperature} />
               </li>
-              <li className="current-weather-description text-capitalize">
+              <li className="text-left text-capitalize">
                 {props.weatherData.description}
               </li>
               <li className="current-weather-icon">

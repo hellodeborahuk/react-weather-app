@@ -40,10 +40,7 @@ vertical-align: middle;
     padding: 30px;
     border-radius: 12px;
     background-color: white;
-    background-image: url(./media/undraw_japan_ubgk.svg);
-    background-repeat: no-repeat;
-    background-size: 55%;
-    background-position: center;
+    
 }
 
 .weatherapp.dark-theme {
@@ -55,6 +52,13 @@ vertical-align: middle;
 }
 .weatherapp.dark-theme a:visited {
     color: rgb(247,242,242);
+}
+
+.background-image-area {
+    background-image: url(./media/undraw_japan_ubgk.svg);
+    background-repeat: no-repeat;
+    background-size: 55%;
+    background-position: center;
 }
 
 .github-link {

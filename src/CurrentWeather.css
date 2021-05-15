@@ -2,10 +2,11 @@
   list-style-type: none;
 }
 .current-weather-info {
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: left;
 }
 
 .current-weather-info ul {
@@ -19,7 +20,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: left;
 }
 .current-weather-icon img {
   width: 80px;
@@ -50,6 +51,7 @@
 }
 .current-weather-description {
   font-size: 20px;
+  text-align: right;
 }
 
 .current-weather-description li {

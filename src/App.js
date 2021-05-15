@@ -52,31 +52,36 @@ export default function App() {
           <div
             className={"weatherapp" + (isDarkModeEnabled ? " dark-theme" : "")}
           >
-            <div className="header row location-date">
-              <div className="col-5">
-                <h1>{(weatherData.ready ? weatherData.city : "Loading...")}</h1>
-                <FormattedDate date={weatherData.date} />
+            <div className="background-image-area">
+              <div className="header row location-date">
+                <div className="col-5">
+                  <h1>{weatherData.ready ? weatherData.city : "Loading..."}</h1>
+                  <FormattedDate date={weatherData.date} />
+                </div>
+                <div className="col-7 d-flex flex-row justify-content-end">
+                  <Search
+                    searchByCity={searchByCity}
+                    searchByLocation={searchByLocation}
+                  />
+                  <Toggle toggleHandler={setIsDarkModeEnabled} />
+                </div>
               </div>
-              <div className="col-7 d-flex flex-row justify-content-end">
-                <Search searchByCity={searchByCity} searchByLocation={searchByLocation} />
-                <Toggle toggleHandler={setIsDarkModeEnabled} />
-              </div>
+              <CurrentWeather weatherData={weatherData} />
             </div>
-            <CurrentWeather weatherData={weatherData} />
           </div>
-          <div className="footer row"> </div>
 
-          <p className="github-link">
-            <a
-              href="https://github.com/hellodeborahuk/react-weather-app"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Open-source code
-            </a>{" "}
-            by Debbie Dann
-          </p>
+          <div className="footer row"> </div>
         </div>
+        <p className="github-link">
+          <a
+            href="https://github.com/hellodeborahuk/react-weather-app"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open-source code
+          </a>{" "}
+          by Debbie Dann
+        </p>
       </div>
     </div>
   );
