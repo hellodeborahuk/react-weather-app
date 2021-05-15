@@ -1,5 +1,6 @@
 import React from "react";
 import "./CurrentWeather.css";
+import WeatherTemperature from "./WeatherTemperature";
 import { FaWind } from "react-icons/fa";
 import { WiHumidity } from "react-icons/wi";
 
@@ -11,10 +12,7 @@ export default function CurrentWeather(props) {
           <div className="col-2">
             <ul className="current-weather-info">
               <li>
-                <span className="temperature-number">
-                  {props.weatherData.temperature}
-                </span>
-                <span className="temperature-unit">°C</span>
+                <WeatherTemperature celsius={props.weatherData.temperature} />
               </li>
               <li className="current-weather-description text-capitalize">
                 {props.weatherData.description}
