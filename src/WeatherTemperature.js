@@ -16,29 +16,42 @@ function showCelsius(event) {
 function fahrenheitTemp() {
     return Math.round((props.celsius * 9) / 5 + 32);
 }
+
+function toggleUnit(event) {
+    event.preventDefault();
+ if (unit === "celsius") {
+     setUnit("fahrenheit");
+ } else {
+     setUnit("celsius");
+ }
+}
+
+let unitSelect;
 if (unit === "celsius") {
-return (
-<div className="WeatherTemperature">
-    <span className="temperature-number">{props.celsius}</span>
-    <span className="temperature-unit">
-      °C |{" "}
-      <a href="/" onClick={showFahrenheit}>
-        °F
-      </a>  
-    </span>
-  </div>
-);
+    unitSelect = (
+      <span className="temperature-unit">
+        °C |{" "}
+        <a href="/" onClick={toggleUnit}>
+          °F
+        </a>
+      </span>
+    );
 } else {
-    return (
-    
-      <div className="WeatherTemperature">
-        <span className="temperature-number">{fahrenheitTemp()}</span>
-        <span className="temperature-unit">
-          <a href="/" onClick={showCelsius}>
-            °C</a> | °F
-        </span>
-      </div>
+    unitSelect = (
+      <span className="temperature-unit">
+        <a href="/" onClick={toggleUnit}>
+          °C
+        </a>{" "}
+        | °F
+      </span>
     );
 }
+
+return (
+  <div className="WeatherTemperature">
+    <span className="temperature-number">{unit === "celsius" ? props.celsius : fahrenheitTemp()}</span>
+   {unitSelect}
+  </div>
+);
     
 }
