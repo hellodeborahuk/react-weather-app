@@ -21,7 +21,9 @@
   justify-content: center;
   align-items: center;
 }
-
+.current-weather-icon img {
+  width: 80px;
+}
 
 .current-temperature {
   text-align: center;
@@ -30,15 +32,21 @@
   justify-content: center;
 }
 
-.current-temperature p {
-  font-size: 30px;
-}
+
 .temperature-number {
   font-size: 80px;
+    color: #869e9b;
+
 }
+
 
 .temperature-unit {
   position: relative;
   font-size: 18px;
+  font-weight: bold;
   top: -40px;
+      color: #869e9b;
+}
+.current-weather-description {
+  font-size: 20px;
 }
