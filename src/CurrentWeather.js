@@ -45,9 +45,6 @@ export default function CurrentWeather(props) {
                 <FaWind />
                 {props.weatherData.wind} km/h
               </li>
-              <li>
-                <FaCloudRain />
-              </li>
             </ul>
           </div>
         </div>
