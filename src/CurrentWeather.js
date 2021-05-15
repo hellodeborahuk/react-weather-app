@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import "./CurrentWeather.css";
 import { FaWind } from "react-icons/fa";
 import { WiHumidity } from "react-icons/wi";
 import { FaCloudRain } from "react-icons/fa";
 
-
 export default function CurrentWeather(props) {
-
   if (props.weatherData.ready) {
     return (
       <div className="current-weather">
@@ -56,7 +54,6 @@ export default function CurrentWeather(props) {
       </div>
     );
   } else {
-   
     return "Loading...";
   }
 }
