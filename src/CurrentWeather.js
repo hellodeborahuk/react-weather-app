@@ -16,8 +16,7 @@ export default function CurrentWeather(props) {
       city: response.data.name,
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
-      icon: response.data.weather[0].icon,
-      iconUrl: "http://openweathermap.org/img/wn/${weatherData.icon}",
+      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
   }
 
