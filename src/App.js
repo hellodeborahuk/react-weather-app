@@ -4,10 +4,33 @@ import Search from "./Search";
 import Toggle from "./Toggle";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
+import axios from "axios";  
 
 
 export default function App() {
   const [isDarkModeEnabled, setIsDarkModeEnabled] = useState(false);
+   const [weatherData, setWeatherData] = useState({ ready: false });
+
+  const [city, setCity] = useState("New York");
+
+   function handleResponse(response) {
+     setWeatherData({
+       ready: true,
+       temperature: Math.round(response.data.main.temp),
+       wind: response.data.wind.speed,
+       date: "Tuesday 6th May, 20:45",
+       city: response.data.name,
+       humidity: response.data.main.humidity,
+       description: response.data.weather[0].description,
+       iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+     });
+   }
+   
+   if (weatherData.ready === false) {
+     const apiKey = "37d0f96cd930737aa442037348f7a9bd";
+     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+     axios.get(apiUrl).then(handleResponse);
+   }
   return (
     <div className="App">
       <div className="container">
@@ -25,7 +48,7 @@ export default function App() {
                 <Toggle toggleHandler={setIsDarkModeEnabled} />
               </div>
             </div>
-            <CurrentWeather defaultCity="New York" />
+            <CurrentWeather weatherData = {weatherData} />
           </div>
           <div className="footer row"> </div>
 

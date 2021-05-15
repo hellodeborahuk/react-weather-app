@@ -3,9 +3,10 @@ import "./CurrentWeather.css";
 import { FaWind } from "react-icons/fa";
 import { WiHumidity } from "react-icons/wi";
 import { FaCloudRain } from "react-icons/fa";
-import axios from "axios";
+
 
 export default function CurrentWeather(props) {
+  /*
   const [weatherData, setWeatherData] = useState({ ready: false});
   function handleResponse(response) {
     setWeatherData({
@@ -18,9 +19,9 @@ export default function CurrentWeather(props) {
       description: response.data.weather[0].description,
       iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
-  }
+  }*/
 
-  if (weatherData.ready) {
+  if (props.weatherData.ready) {
     return (
       <div className="current-weather">
         <div className="body row">
@@ -28,17 +29,17 @@ export default function CurrentWeather(props) {
             <ul className="current-weather-info">
               <li>
                 <span className="temperature-number">
-                  {weatherData.temperature}
+                  {props.weatherData.temperature}
                 </span>
                 <span className="temperature-unit">°C</span>
               </li>
               <li className="current-weather-description text-capitalize">
-                {weatherData.description}
+                {props.weatherData.description}
               </li>
               <li className="current-weather-icon">
                 <img
-                  src={weatherData.iconUrl}
-                  alt={weatherData.description}
+                  src={props.weatherData.iconUrl}
+                  alt={props.weatherData.description}
                   id="icon"
                 />
               </li>
@@ -54,11 +55,11 @@ export default function CurrentWeather(props) {
           <div className="col-2">
             <ul className="current-weather-description">
               <li>
-                <WiHumidity /> {weatherData.humidity}%
+                <WiHumidity /> {props.weatherData.humidity}%
               </li>
               <li>
                 <FaWind />
-                {weatherData.wind} km/h
+                {props.weatherData.wind} km/h
               </li>
               <li>
                 <FaCloudRain />
@@ -69,10 +70,7 @@ export default function CurrentWeather(props) {
       </div>
     );
   } else {
-    const apiKey = "37d0f96cd930737aa442037348f7a9bd";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
-
+   
     return "Loading...";
   }
 }
