@@ -6,12 +6,10 @@ import FormattedDate from "./FormattedDate";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
-import { faTruckLoading } from "@fortawesome/free-solid-svg-icons";
 
 export default function App() {
   const [isDarkModeEnabled, setIsDarkModeEnabled] = useState(false);
   const [weatherData, setWeatherData] = useState({ ready: false });
-  const [city, setCity] = useState("New York");
 
   function handleResponse(response) {
     setWeatherData({
@@ -26,16 +24,25 @@ export default function App() {
     });
   }
 
- 
+     const apiKey = "37d0f96cd930737aa442037348f7a9bd";
 
-  const doSearch = () => {
-    const apiKey = "37d0f96cd930737aa442037348f7a9bd";
+
+  const searchByCity = (city) => {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
 
+  const searchByLocation = (position) => {
+    let lat = position.coords.latitude;
+    let long = position.coords.longitude;
+    let locationUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`;
+
+    axios.get(locationUrl).then(handleResponse);
+  }
+
+  
    if (weatherData.ready === false) {
-     doSearch();
+     searchByCity("London");
    }
 
   return (
@@ -51,7 +58,7 @@ export default function App() {
                 <FormattedDate date={weatherData.date} />
               </div>
               <div className="col-7 d-flex flex-row justify-content-end">
-                <Search setCity={setCity} city={city} doSearch={doSearch}/>
+                <Search searchByCity={searchByCity} searchByLocation={searchByLocation} />
                 <Toggle toggleHandler={setIsDarkModeEnabled} />
               </div>
             </div>
