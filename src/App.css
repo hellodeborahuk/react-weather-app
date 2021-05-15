@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
 
-h1 {
+.location-date h1 {
     font-family: 'Lora', serif;
     font-weight: 700;
     font-size: 50px;
@@ -16,6 +16,13 @@ p {
 
 a {
     color: #869e9b;
+}
+
+a:hover {
+    color: #869E9B!important;
+}
+a:visited {
+    color: #524948;
 }
 
 .outerdiv {
@@ -38,4 +45,11 @@ vertical-align: middle;
 .weatherapp.dark-theme {
     background-color: #333;
     color: rgb(247,242,242);
+}
+.weatherapp.dark-theme p {
+        color: rgb(247,242,242);
+}
+
+.github-link {
+    margin-left: 50px;
 }

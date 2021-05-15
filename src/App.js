@@ -16,7 +16,7 @@ export default function App() {
           <div
             className={"weatherapp" + (isDarkModeEnabled ? " dark-theme" : "")}
           >
-            <div className="header row">
+            <div className="header row location-date">
               <div className="col-5">
                 <h1>London</h1>
                 <p>Tuesday 6th May, 20:45</p>
@@ -44,7 +44,7 @@ export default function App() {
           </div>
           <div className="footer row"> </div>
 
-          <p>
+          <p className="github-link">
             <a
               href="https://github.com/hellodeborahuk/react-weather-app"
               target="_blank"
