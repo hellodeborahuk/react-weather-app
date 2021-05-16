@@ -1,5 +1,11 @@
 .WeatherForecast {
     text-align: center;
+    background-color: #f2eaea;
+    border-radius: 12px;
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .WeatherForecast-day {
