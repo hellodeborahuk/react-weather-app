@@ -22,7 +22,6 @@ export default function CurrentWeather(props) {
                   src={props.weatherData.iconUrl}
                   alt={props.weatherData.description}
                   id="icon"
-                
                 />
               </li>
             </ul>
@@ -36,6 +35,7 @@ export default function CurrentWeather(props) {
               <li>
                 <FaWind /> {props.weatherData.wind} km/h
               </li>
+         
             </ul>
           </div>
         </div>
