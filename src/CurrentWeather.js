@@ -1,6 +1,7 @@
 import React from "react";
 import "./CurrentWeather.css";
 import WeatherTemperature from "./WeatherTemperature";
+import WeatherIcon from "./WeatherIcon";
 import { FaWind } from "react-icons/fa";
 import { WiHumidity } from "react-icons/wi";
 
@@ -18,10 +19,9 @@ export default function CurrentWeather(props) {
                 <p>{props.weatherData.description}</p>
               </li>
               <li className="current-weather-icon">
-                <img
-                  src={props.weatherData.iconUrl}
+                <WeatherIcon
+                  code={props.weatherData.icon}
                   alt={props.weatherData.description}
-                  id="icon"
                 />
               </li>
             </ul>
@@ -35,7 +35,6 @@ export default function CurrentWeather(props) {
               <li>
                 <FaWind /> {props.weatherData.wind} km/h
               </li>
-         
             </ul>
           </div>
         </div>
