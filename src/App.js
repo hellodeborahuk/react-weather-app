@@ -3,6 +3,7 @@ import CurrentWeather from "./CurrentWeather";
 import Search from "./Search";
 import Toggle from "./Toggle";
 import FormattedDate from "./FormattedDate";
+import WeatherForecast from "./WeatherForecast";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
@@ -69,6 +70,7 @@ export default function App() {
               </div>
               <CurrentWeather weatherData={weatherData} />
             </div>
+            <WeatherForecast />
           </div>
 
           <div className="footer row"> </div>

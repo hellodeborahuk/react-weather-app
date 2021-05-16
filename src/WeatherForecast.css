@@ -1,0 +1,21 @@
+.WeatherForecast {
+    text-align: center;
+}
+
+.WeatherForecast-day {
+    font-weight: bold;
+    color: #869E9B;
+}
+
+.WeatherForecast-icon li {
+    list-style: none;
+}
+
+.WeatherForecast-icon img {
+    width: 80px;
+}
+
+.WeatherForecast-temperatures-min {
+    opacity: 0.6;
+    margin-left: 5px;
+}
