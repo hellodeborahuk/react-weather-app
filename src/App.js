@@ -15,6 +15,7 @@ export default function App() {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       temperature: Math.round(response.data.main.temp),
       wind: response.data.wind.speed,
       date: new Date(response.data.dt * 1000),
@@ -70,7 +71,7 @@ export default function App() {
               </div>
               <CurrentWeather weatherData={weatherData} />
             </div>
-            <WeatherForecast />
+            <WeatherForecast coordinates={weatherData.coordinates} />
           </div>
 
           <div className="footer row"> </div>
