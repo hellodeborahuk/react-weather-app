@@ -4,7 +4,7 @@
     border-radius: 4px;
     padding: 5px;
     font-size: 18px;
-    max-width: 100%;
+    max-width: 60%;
 }
 
 .city-search {
@@ -48,5 +48,9 @@
 .city-search {
 
   padding-top: 0;
+}
+
+.search-input {
+  max-width: 100%;
 }
 }
