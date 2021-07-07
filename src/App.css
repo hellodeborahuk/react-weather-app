@@ -29,16 +29,16 @@ a:visited {
 .outerdiv {
 background: rgb(247,242,242);
 background: linear-gradient(219deg, rgba(247,242,242,1) 3%, rgba(234,223,223,1) 100%);    
-margin: 30px;
+margin: 10px;
     border-radius: 12px;
 vertical-align: middle;
 }
 
 .weatherapp {
     display: inline-block;
-    margin: 50px;
-    width: 90%;
-    padding: 30px;
+    margin: 10px;
+    width: 95%;
+    padding: 10px;
     border-radius: 12px;
     background-color: white;
     
@@ -55,13 +55,7 @@ vertical-align: middle;
     color: rgb(247,242,242);
 }
 
-.background-image-area {
-    background-image: url(./media/undraw_japan_ubgk.svg);
-    background-repeat: no-repeat;
-    background-size: 60%;
-    background-position: center;
-    min-height: 400px;
-}
+
 
 .github-link {
     margin-left: 30px;
@@ -71,3 +65,23 @@ vertical-align: middle;
 .github-link a {
     color: rgb(247,242,242);
 }
+
+@media (min-width: 992px) { 
+
+    .outerdiv {
+        margin: 30px;
+    }
+    .weatherapp {
+    margin: 50px;
+    width: 90%;
+    padding: 30px;
+    
+}
+.background-image-area {
+    background-image: url(./media/undraw_japan_ubgk.svg);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+    min-height: 400px;
+}
+ }

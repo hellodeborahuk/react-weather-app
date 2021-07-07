@@ -2,12 +2,11 @@
   list-style-type: none;
 }
 .current-weather-info {
-  text-align: left;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
-margin-left: 32px;
+  align-items: center;
 }
 
 .current-weather-info ul {
@@ -54,12 +53,11 @@ margin-left: 32px;
 }
 .current-weather-description {
   font-size: 20px;
-  text-align: right;
+  text-align: center;
       display: flex;
     align-content: center;
     flex-direction: column;
     justify-content: center;
-    margin-right: 32px;
 }
 
 .current-weather-description ul {
@@ -68,3 +66,26 @@ margin-left: 32px;
 .current-weather-description li {
   list-style-type: none;
 }
+
+
+@media (min-width: 992px) { 
+
+  .current-weather-info {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+margin-left: 32px;
+}
+
+.current-weather-description {
+  font-size: 20px;
+  text-align: right;
+      display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 32px;
+}
+ }

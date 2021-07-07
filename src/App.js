@@ -4,8 +4,8 @@ import Search from "./Search";
 import Toggle from "./Toggle";
 import FormattedDate from "./FormattedDate";
 import WeatherForecast from "./WeatherForecast";
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
+import "./App.css";
 import axios from "axios";
 
 export default function App() {
@@ -57,13 +57,13 @@ export default function App() {
             >
               <div className="background-image-area">
                 <div className="header row location-date">
-                  <div className="col-5">
+                  <div className="col-12 col-md-5">
                     <h1>
                       {weatherData.ready ? weatherData.city : "Loading..."}
                     </h1>
                     <FormattedDate date={weatherData.date} />
                   </div>
-                  <div className="col-7 d-flex flex-row justify-content-end">
+                  <div className="col-12 col-md-7 d-flex flex-row justify-content-end">
                     <Search
                       searchByCity={searchByCity}
                       searchByLocation={searchByLocation}
