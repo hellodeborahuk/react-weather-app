@@ -16,16 +16,8 @@
   margin: 0;
 }
 
-.current-weather-icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: left;
-  
-  
-}
-.current-weather-icon img {
-  width: 128px;
+.current-weather-icon{
+  display:none;
 }
 
 .current-temperature {
@@ -38,7 +30,7 @@
 
 .temperature-number {
     font-family: 'Lora', serif;
-  font-size: 80px;
+  font-size: 60px;
     color: #869e9b;
 
 }
@@ -87,5 +79,19 @@ margin-left: 32px;
     flex-direction: column;
     justify-content: center;
     margin-right: 32px;
+}
+.current-weather-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  
+  
+}
+.current-weather-icon img {
+  width: 128px;
+}
+.temperature-number {
+  font-size: 80px;
 }
  }

@@ -10,6 +10,7 @@
 .city-search {
   text-align: right;
   margin-right: 15px;
+  padding-top: 20px;
 }
 
 .search-button {
@@ -41,4 +42,11 @@
 .current-button:hover {
   color: #869e9b;
   background-color: #f4f6f6;
+}
+
+@media (min-width: 992px) { 
+.city-search {
+
+  padding-top: 0;
+}
 }

@@ -13,7 +13,7 @@ function handleClick(event) {
 }
 
   return (
-    <div class="toggle">
+    <div className="toggle d-none d-md-block">
       <input type="checkbox" id="toggle" onChange={handleClick} />
       <label for="toggle"></label>
     </div>
