@@ -8,6 +8,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 import axios from "axios";
 
+
 export default function App() {
   const [isDarkModeEnabled, setIsDarkModeEnabled] = useState(false);
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -27,7 +28,7 @@ export default function App() {
     });
   }
 
-  const apiKey = "37d0f96cd930737aa442037348f7a9bd";
+  const apiKey = `${process.env.REACT_APP_API_KEY}`;
 
   const searchByCity = (city) => {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
