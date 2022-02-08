@@ -1,5 +1,7 @@
 # React Weather App
 
+![react weather app](https://user-images.githubusercontent.com/29425781/153005390-b948f7eb-4750-432e-b30a-9598e355b48e.png)
+
 ## About The Project
 
 For SheCodes React Workshop, we went through the process of creating a Weather App. It started with the design and creating a wireframe of how I wanted it to look. The workshop led you step by step how to create the app, but the design they focused on was very different to mine. I found I came across challenges where I needed to create different components for sections of my page and figure out for myself how they worked together. Moving away from their design helped me to learn more and deepen my understanding of React.
